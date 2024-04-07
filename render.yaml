@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: onakasuita
+    plan: free
+    buildCommand: "yarn"
+    startCommand: "npm run start"
