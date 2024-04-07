@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <script async src="https://arc.io/widget.min.js#L1SfLEWE"></script>
+   <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>	
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHVNHMYGN3"></script>
+   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+   <script src="https://kit.fontawesome.com/32abd502cd.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="../particles.css">
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-VHVNHMYGN3');
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <link rel="stylesheet" id="themecss" href="index.css">
+   <link rel="stylesheet" href="nav.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="shortcut icon" type="image/jpg" href="../images/favicon/favicon.ico" />
+   <link href="https://fonts.googleapis.com/css?family=Share Tech Mono" rel="stylesheet" />
+   <style>
+      #sidenav {
+         opacity: 1;
+         visibility: visible;
+         transition: opacity 0.5s ease-in-out;
+         margin-bottom: 20px;
+      }
+
+      #sidenav.fadeOut {
+         opacity: 0;
+         transition: opacity 0.5s ease-in-out;
+      }
+      body {
+	      font-family: Noto sans;
+	      background-color: black;
+         color: #ffffff;
+      }
+		a {
+         color: white;
+      }
+		.center {
+         text-align: center;
+      }
+		hr { 
+ 	      border: 1px solid #ffffff;
+         border-radius: 100px;
+         width: 400px
+      }
+   </style>
+</head>
+
+<body>
+   <div id="particles-js"><div id="blob"></div></div>   <div id="imgsearch">
+      <title>Night！</title>
+      <div>
+         <div id="icbuttons">
+            <a href="../index" id="home" class="zoom" index><img src="../images/favicon/favicon.ico" alt="Logo" id="logo"
+                  style="width:49px;height:49px;border-radius:10px;"></a>
+            <div style="position:fixed;right:0;height:64px;top:10px;">
+               <div style="display:flex;justify-content:flex-end;align-items:center;">
+                  <a href="../apps"
+                     style="width:50px;padding-right:1px;padding-left:1px;margin-right:6%;font-size:13px;" id="apps"
+                     class="fa-solid fa-grip zoom navitem"></a>
+                  <a href="../games"
+                     style="width:50px;padding-right:1px;padding-left:1px;margin-right:10%;font-size:13px;" id="games"
+                     class="fa-solid fa-gamepad zoom navitem"></a>
+                  <a href="../tabs"
+                     style="width:50px;padding-right:1px;padding-left:1px;margin-right:5%;font-size:13px;" id="tabs"
+                     class="fa-solid fa-bars-progress zoom navitem"></a>
+                  <a onclick="fadeInElement();"
+                     style="width:50px;padding-right:1px;padding-left:1px;margin-right:10%;font-size:13px;"
+                     id="settings" class="fa-solid fa-gear zoom navitem"></a>
+               </div>
+            </div>
+         </div>
+         <br />
+      </div>
+		<h2 class="center">Developers that helped work on Night v1</h2>
+	 <p style="margin-bottom: -10px" class="center">GhostX - mn_official</p>
+	 <p style="margin-bottom: -10px" class="center">Amplify - not.amplify_</p>
+	 <p style="margin-bottom: -10px" class="center">Sky - skysthelimit.dev</p>
+	 <p style="margin-bottom: -10px" class="center">wr_nd</p>
+		<h3 class="center">Thank you so much for helping ❤️</h3>
+<hr />
+		<h2 class="center";>Current Build</h2>
+	<p class="center">Your current build is v1. <br />Please check our <a href='https://discord.gg/QmWUfvm4bn/'>Discord</a> Server to see if you are up <br /> to date with hosting or if this link is up to date.</p>
+            <div class="sidenav" id="sidenav">
+               <a onclick="fadeOutElement();" class="fa-solid fa-circle-xmark closebutton" id="closebutton"></a>
+               <table style="width:80%;margin-left:10%;margin-left:10%;">
+                  <tr>
+                     <th>
+                        <div id="settings-boxes">
+                           <h2>マントを切り替える</h2>
+                           <p style="text-align: center; font-size: 18px; margin-top: -60px;">Cloak your tab with a
+                              custom name and favicon</p>
+                           <span class="custom-dropdown big">
+                              <select class="dropdown" id="cloakSwitcher">
+                                 <option value="off">オフ</option>
+                                 <option value="drive">Google ドライブ</option>
+                                 <option value="classroom">Google クラスルーム</option>
+                                 <option value="gmail">Gmail</option>
+                                 <option value="google">Google</option>
+                              </select>
+                           </span>
+                           <a onclick="switchCloak(); reloadpage();" class="button-save">適用する</a>
+                        </div>
+                     </th>
+                     <th>
+                        <div id="settings-boxes">
+                           <h2 style="text-align: center;">テーマs</h2>
+                           <p style="text-align: center; font-size: 18px; margin-top: -60px;">サイトのテーマを変更する
+                           </p>
+                           <span class="custom-dropdown big">
+                              <select class="dropdown" id="themeSwitcher">
+                                 <option value="default">デフォルト</option>
+                                 <option value="fire">🔥</option>
+                                 <option value="noir">ノワール？</option>
+                                 <option value="void">空所</option>
+                                 <option value="ip">アイアンプライム</option>
+                                 <option value="xg">Xゲーム</option>
+                                 <option value="stealth">ステルス</option>
+                                 <option value="fg">ブロガーマンズ</option>
+                                 <option value="ghost">おばけ</option>
+                                 <option value="midnight">夜中</option>
+                                 <option value="meteor">日本語にしたらダサくなった</option>
+                              </select>
+                           </span>
+                           <a onclick="switchProxy(); reloadpage();" class="button-save">Apply</a>
+                        </div>
+                     </th>
+                     <th>
+                        <div id="settings-boxes">
+                           <h2 style="text-align: center;">プロキシを開く</h2>
+                           <b>
+                              <p style="text-align: center; font-size: 18px; margin-top: -40px;">プロキシが機能しない場合は、ベアサーバーがブロックされている可能性があります。<br>
+                                 これにより、サーバーが交換され、1 つのサーバーがダウンしてもプロキシが機能できるようになります。訳:待っとけ</p>
+                           </b>
+                           <span class="custom-dropdown big">
+                              <select class="dropdown" id="bareSwitcher">
+                                 <option value="default">デフォルト</option>
+                                 <option value="default2">デフォルト 2</option>
+                                 <option value="default3">デフォルト 3</option>
+                                 <option value="sndefault">シャドウのデフォルト</option>
+                                 <option value="snalt">シャドウアルト</option>
+                                 <option value="indefault">Interstellarのデフォルト</option>
+                              </select>
+                           </span>
+                           <a onclick="switchBare(); reloadpage();" class="button-save">適用する</a>
+                        </div>
+                     </th>
+                  </tr>
+                  <tr>
+                     <td>
+                        <br>
+                        <div id="settings-boxes">
+                           <h2 style="text-align: center;">粒子を切り替える</h2>
+                           <p style="text-align: center; font-size: 18px; margin-top: -40px;">デフォルトのテーマのような
+                              特定のテーマのパーティクルに切り替えることができます</p>
+                           <label class="switch">
+                              <input type="checkbox" class="particlecheckbox">
+                              <div class="slider"></div>
+                           </label>
+                        </div>
+                     </td>
+                     <td>
+                        <br>
+                        <div id="settings-boxes">
+                           <h2 style="text-align: center;">about:blankで開く</h2>
+                           <p style="text-align: center; font-size: 18px; margin-top: -40px;">about:blankというタブで開く履歴が残らない？かも</p>
+                           <a class="button-save" style="text-align:center; padding-right:20px;"
+                              onclick="openGame();">Launch</a>
+
+                        </div>
+                     </td>
+                     <td>
+                        <br>
+                        <div id="settings-boxes">
+                           <h2 style="text-align: center;">近日公開！</h2>
+                           <p style="text-align: center; font-size: 18px; margin-top: -100px;">この機能はすでに追加されました</p>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <script src="/scripts/register-sw.js" defer></script>
+            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/index.js" defer></script>
+            <script src="/scripts/particles.min.js"></script>
+            <script src="/scripts/settings.js"></script>
+            <script id="paeticlesrc" src=""></script>
+            <script src="/scripts/blank.js"></script>
+            <script>
+               fadeOutElement();
+            </script>
+            <div id="footer">
+               <p>&Copy; 2023 Night.無断複写・転載を禁じます。</p>
+            </div>
+</body>
+
+</html>
